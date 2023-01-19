@@ -15,17 +15,17 @@ function removeChar(str){
 }
 
 /* METHOD USED:
-slice(indexStart)
-slice(indexStart, indexEnd):
-
-Slice method:
+1. String.prototype.slice()
 Extracts a section of a string and returns it as a new string, without modifying the original string
 
 Parameters:
-indexStart
+slice(indexStart)
+slice(indexStart, indexEnd):
+
+*indexStart
 The index of the first character to include in the returned substring.
 
-indexExn (optional)
+*indexEnd (optional)
 The index of the first character to exclude from the returned substring.
   *Negative indexes count backwards from the end of the string
 
