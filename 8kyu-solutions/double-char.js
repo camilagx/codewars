@@ -21,7 +21,7 @@ function doubleChar(str) {
   return newString;
 }
 
-// Codewar top best-practice solution:
+// Best-practice solution:
 const doubleChar = (str) => str.split("").map(c => c + c).join("");
 
 /* METHODS USED:
