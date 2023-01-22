@@ -36,7 +36,7 @@ console.log(str);
 2. Array.prototype.reduce()
 The reduce() method executes a reducer function on each element of the array and returns a single output value.
 
-Parameters:
+PARAMETERS:
 arr.reduce(callback(accumulator, currentValue), initialValue);
 
 -callback(accumulator, currentValue)
