@@ -13,10 +13,10 @@ XO("zzoo") => false
 
 //First solution
 function XO(str) {
-  let numOfX;
-  let numOfO;
+  let numOfX = 0;
+  let numOfO = 0;
   //go through each element in the string
-  for(let letter of str){
+  for(let letter of str.toLowerCase()){
     //compare if letter is x or o then track amount of x and o's - case insensitive 
     if(letter == 'x'){
       numOfX++;
@@ -28,3 +28,11 @@ function XO(str) {
   return (numOfX=== numOfO);
 }
 
+/* Takeaways:
+1. You have to initialize the variable to a number (or zero) before post or pre-incrementing.
+  Otherwise, the console will display NaN.
+2. Comparing a capital with a lowercase of the same letter using an 'equal to' operator will still return false. 
+Ex) 'X' == 'x' //false
+  If case insensitive, the trick is to use .toLowerCase() method.
+
+*/
