@@ -13,14 +13,6 @@ function sumTwoSmallestNumbers(numbers) {
   return numbers[0] + numbers[1]; 
 }
 
-/* More detailed of what's happening with sort method. Asc order
-function sumTwoSmallestNumbers(numbers) {  
-  numbers.sort((a,b) => a-b);
-  return numbers[0] + numbers[1]; 
-}
-*/
-
-
 /* METHODS USE:
 1. Array.prototype.sort()
 The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. 
