@@ -12,7 +12,9 @@ XO("zzoo") => false
 */
 
 //First solution
-
+function XO(str) {
+  
+}
 //go through each element in the string
 //keep count of x and o - case insensitive 
 //if total count of x is equal to o, return true
