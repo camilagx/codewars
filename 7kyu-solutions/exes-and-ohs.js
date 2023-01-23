@@ -13,9 +13,18 @@ XO("zzoo") => false
 
 //First solution
 function XO(str) {
-  
+  let numOfX;
+  let numOfO;
+  //go through each element in the string
+  for(let letter of str){
+    //compare if letter is x or o then track amount of x and o's - case insensitive 
+    if(letter == 'x'){
+      numOfX++;
+    }else if(letter == 'o'){
+      numOfO++;
+    }
+  }
+  //if total count of x is equal to o, return true
+  return (numOfX=== numOfO);
 }
-//go through each element in the string
-//keep count of x and o - case insensitive 
-//if total count of x is equal to o, return true
 
