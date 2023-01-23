@@ -28,11 +28,36 @@ function XO(str) {
   return (numOfX=== numOfO);
 }
 
-/* Takeaways:
+//Best practice with Regex
+function XO(str) {
+  let x = str.match(/x/gi);
+  let o = str.match(/o/gi);
+  return (x && x.length) === (o && o.length);
+}
+
+//Best Practice
+const XO = str => {
+  str = str.toLowerCase().split('');
+  return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+}
+
+/* Takeaways from first solution:
+
 1. You have to initialize the variable to a number (or zero) before post or pre-incrementing.
   Otherwise, the console will display NaN.
 2. Comparing a capital with a lowercase of the same letter using an 'equal to' operator will still return false. 
 Ex) 'X' == 'x' //false
   If case insensitive, the trick is to use .toLowerCase() method.
 
+*/
+
+/* METHODS USED:
+  1. Array.prototype.filter()
+    The filter() method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+
+    Example:
+    let nums = [2,3,4,5,8];
+    console.log(nums.filter(x => x % 2 === 0)); // [2,4,8];
+
+    console.log(nums); // [2,3,4,5,8] Original array is not mutated
 */
