@@ -10,5 +10,5 @@ solution('abc', 'd') // returns false
 
 //First Solution
 function solution(str, ending){
-  // TODO: complete
-}
+  return str.endsWith(ending);
+} 
