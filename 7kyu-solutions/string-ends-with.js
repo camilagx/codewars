@@ -12,3 +12,16 @@ solution('abc', 'd') // returns false
 function solution(str, ending){
   return str.endsWith(ending);
 } 
+
+/* METHODS USED:
+  1. String.prototype.endsWith()
+  The endsWith() method determines whether a string ends with the characters of a specified string.
+
+  example)
+  let jobTitle = 'Software Engineer';
+  console.log(jobTitle.endsWith('Engineer));
+
+  output: true
+
+  Resource: MDN
+*/
