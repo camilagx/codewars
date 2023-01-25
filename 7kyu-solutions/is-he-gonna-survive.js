@@ -6,6 +6,13 @@ Return True if yes, False otherwise :)
 
 */
 
+// Solution
 function hero(bullets, dragons){
-  //Get Coding!
+  //takes 2 bullets to kill a dragon
+  return bullets >= dragons * 2;
   }
+
+/* Logic
+If 2 bullets kill a dragon, the number of bullets the hero must carry is 2 times the amount of dragon or more.
+
+*/
