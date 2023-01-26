@@ -16,6 +16,18 @@ Examples
 
 */
 
+//First solution
 function removeSmallest(numbers) {
-  return [];
+  if(numbers.length < 1){
+    return [];
+  }
+  
+  let newArray = numbers;
+  //sort
+    newArray.sort((a,b) => a-b);
+    let min = newArray[0]
+  //find
+    let index = numbers.indexOf(min)
+  //remove
+    return numbers.splice(index, 1);
 }
