@@ -15,3 +15,7 @@ Examples
 * Input: [2,2,1,2,1], output = [2,2,2,1]
 
 */
+
+function removeSmallest(numbers) {
+  return [];
+}
