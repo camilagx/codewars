@@ -11,3 +11,26 @@ Happy Coding!
 
 
 */
+
+//First Solution
+function squareDigits(num){
+  num += '';
+  let squaredDigits = 0;
+  
+ for(let digit of num){
+   squaredDigits = squaredDigits + Math.pow(digit,2) + '';
+ }
+  return Number(squaredDigits);
+}
+
+
+//Best Practice
+function squareDigits(num){
+  return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+  
+}
+
+//2nd Best Practice
+function squareDigits(num){
+  return +num.toString().split('').map(i => i*i).join('');
+}
