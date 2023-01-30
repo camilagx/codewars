@@ -11,3 +11,7 @@ longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 */
 
+//Starter Code
+function longest(s1, s2) {
+  // your code
+}
