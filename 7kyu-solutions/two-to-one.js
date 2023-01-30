@@ -11,7 +11,17 @@ longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 */
 
-//Starter Code
+//First Solution
 function longest(s1, s2) {
-  // your code
+  //Turn into an array
+  let currentLetters = s1.concat(s2).split('');
+  let sortedLetters = [];
+
+  for(let letter of currentLetters){
+    if(!(sortedLetters.includes(letter))){
+      sortedLetters.push(letter);
+    }
+  }
+
+  return sortedLetters.sort().join('');
 }
