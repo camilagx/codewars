@@ -25,3 +25,11 @@ function longest(s1, s2) {
 
   return sortedLetters.sort().join('');
 }
+
+//Best practice
+const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+
+//2nd best practice
+function longest(s1, s2) {
+  return Array.from(new Set(s1 + s2)).sort().join('');
+}
