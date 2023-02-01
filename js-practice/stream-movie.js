@@ -25,12 +25,15 @@ library.movieTime() // returns false
 
 */
 
-//Starter Code
+//First Solution
 class Network {
   constructor(data, users) {
     this.data = data;
     this.users = users;
   }
   // Insert code below
-  
+  movieTime(){
+    this.data -= this.users * 5;
+    return (this.data >= 10);
+  }
 }
