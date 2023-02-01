@@ -16,3 +16,30 @@ Feel free to reference the Unicode Table as well as the JavaScript String method
 
 
 */
+class ShiftCipher{
+  constructor(shift){
+    this._shift = shift;
+  }
+  encrypt(text){
+    text = text.toUpperCase();
+    let newString = '';
+    for(let val of text){
+      let charCode = val.charCodeAt(0);
+      let charCodeAfterShift = charCode + this._shift;
+
+      if ((charCode >= 65  && charCode <= 90) && (val !== ' ')){
+        //if shift is more than characters, 
+        if(charCodeAfterShift > 90){
+          let newCharCode = (charCodeAfterShift % 90);
+          newString += String.fromCharCode(newCharCode);
+        }else{
+          newString += String.fromCharCode(charCodeAfterShift);
+        }
+      }else{
+        //add the same character
+        newString += val;
+      }
+    }
+    return newString;
+  }
+}
