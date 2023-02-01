@@ -23,7 +23,7 @@ balloonAttack(p1, p2);
 Feel free to use the status() method to output each player’s balloon count at any given time.
 */
 
-//Starter code
+//Solution
 class Player {
   constructor(name, hitsPerMinute) {
     this.name = name;
@@ -35,5 +35,24 @@ class Player {
     console.log(`Player: ${this.name} -- Balloons Left: ${this.balloonCount}`)
   }
 }
+// Write function below
+function balloonAttack(player1, player2){
+	let player1TotalHits = player1.hitsPerMinute * 10;
+	let player2TotalHits = player2.hitsPerMinute * 10;
+	
+  if(player1TotalHits > player2TotalHits){
+    return player1.name;
+  }else if(player1TotalHits < player2TotalHits){
+    return player2.name;
+  }else{
+    return 'Tie';
+  }
+}
+
+
+const p1 = new Player('p1', 5);
+const p2 = new Player('p2', 2);
+ 
+balloonAttack(p1, p2);
 
 // Write function below
