@@ -30,8 +30,10 @@ class ShiftCipher{
       if ((charCode >= 65  && charCode <= 90) && (val !== ' ')){
         //if shift is more than characters, 
         if(charCodeAfterShift > 90){
-          let newCharCode = (charCodeAfterShift % 90);
+          let newCharCode = 64 + (charCodeAfterShift % 90);
+          console.log(`new char code: ${newCharCode}`);
           newString += String.fromCharCode(newCharCode);
+          console.log(`new string: ${newString}`);
         }else{
           newString += String.fromCharCode(charCodeAfterShift);
         }
