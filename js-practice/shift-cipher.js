@@ -42,4 +42,28 @@ class ShiftCipher{
     }
     return newString;
   }
+  decrypt(text){
+    text = text.toLowerCase();
+    let newString = '';
+    for(let val of text){
+
+      let charCode = val.charCodeAt(0);
+      let charCodeAfterShift = charCode - this._shift;
+
+      if ((charCode >= 97  && charCode <= 122) && (val !== ' ')){
+        //if shift is more than characters, 
+        if(charCodeAfterShift < 97){
+          //to include ASCII 122
+          let newCharCode = 123 - (97 % charCodeAfterShift);
+          newString += String.fromCharCode(newCharCode);
+        }else{
+          newString += String.fromCharCode(charCodeAfterShift);
+        }
+      }else{
+        //add the same character
+        newString += val;
+      }
+    }
+    return newString;
+  }
 }
