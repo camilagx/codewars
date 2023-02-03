@@ -16,6 +16,8 @@ Feel free to reference the Unicode Table as well as the JavaScript String method
 
 
 */
+
+//Personal solution without refactor
 class ShiftCipher{
   constructor(shift){
     this._shift = shift;
@@ -47,25 +49,64 @@ class ShiftCipher{
   decrypt(text){
     text = text.toLowerCase();
     let newString = '';
-    for(let val of text){
 
+    for(let val of text){
       let charCode = val.charCodeAt(0);
       let charCodeAfterShift = charCode - this._shift;
 
       if ((charCode >= 97  && charCode <= 122) && (val !== ' ')){
-        //if shift is more than characters, 
         if(charCodeAfterShift < 97){
-          //to include ASCII 122
           let newCharCode = 123 - (97 % charCodeAfterShift);
           newString += String.fromCharCode(newCharCode);
         }else{
           newString += String.fromCharCode(charCodeAfterShift);
         }
       }else{
-        //add the same character
         newString += val;
       }
     }
     return newString;
+  }
+}
+
+//codecademy solution
+class ShiftCipher {
+  constructor(shift){
+    this.shift = shift;
+  }
+  encrypt(plainString) {
+    let encryptString = '';
+    const tempString = plainString.toUpperCase();
+
+    for (let i=0; i < tempString.length; i++) {
+      let charNum = tempString.charCodeAt(i);
+      
+      if (charNum <= 90 && charNum >= 65) {
+        charNum += this.shift;
+        if (charNum > 90) {
+          charNum -= 26;
+        }
+      }
+      encryptString += String.fromCharCode(charNum);
+    }
+    return encryptString;
+  }
+
+  decrypt(encryptString) {
+    let decryptString = '';
+    const tempString = encryptString.toLowerCase();
+
+    for (let i=0; i < tempString.length; i++) {
+      let charNum = tempString.charCodeAt(i);
+      
+      if (charNum <= 122 && charNum >= 97) {
+        charNum -= this.shift;
+        if (charNum < 97) {
+          charNum += 26;
+        }
+      }
+      decryptString += String.fromCharCode(charNum);
+    }
+    return decryptString;
   }
 }
