@@ -28,3 +28,6 @@ Convert jsObject back to a JSON string using JSON.stringify() and save it as ano
 
 Log the jsObjectToJson string on the console.
 */
+
+//Starter Code
+const jsonData = '{"parent":{"name":"Sally","age":45,"children":[{"name":"Kim","age":3},{"name":"Lee","age":1}]}}';
