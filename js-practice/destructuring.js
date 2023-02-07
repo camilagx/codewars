@@ -15,3 +15,9 @@ console.log(color1, color2, color3);
 Destructure the items from the planets object so that they are named x, y, and z. If done correctly, the planets should be printed in this order: ‘Saturn’, ‘Mars’, ‘Neptune’.
 
 */
+let planets = { x: 'Saturn', y: 'Mars', z: 'Neptune' };
+
+// Destructure here
+
+
+console.log(x, y, z);
