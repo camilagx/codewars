@@ -7,6 +7,6 @@ Destructure the items from the colors array into new variables color1, color2, a
 let colors = ['blue','red','purple'];
 
 // Destructure here
-
-
+//Solution
+let [color1, color2, color3] = colors;
 console.log(color1, color2, color3);
