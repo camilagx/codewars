@@ -30,4 +30,12 @@ Log the jsObjectToJson string on the console.
 */
 
 //Starter Code
-const jsonData = '{"parent":{"name":"Sally","age":45,"children":[{"name":"Kim","age":3},{"name":"Lee","age":1}]}}';
+const jsonData1 = '{"parent":{"name":"Sally","age":45,"children":[{"name":"Kim","age":3},{"name":"Lee","age":1}]}}';
+
+//Solution
+const jsonObject = JSON.parse(jsonData1);
+jsonObject["parent"]["age"] = 35;
+
+const jsObjectToJson = JSON.stringify(jsonObject);
+
+console.log(jsObjectToJson);
