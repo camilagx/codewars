@@ -26,3 +26,18 @@ Define a function named printPlantInfo() so that this code logs the string: ‘T
 
 Make sure to use destructuring for the function’s parameters.
 */
+
+//Starter code
+let prairieRose = {
+  name: 'Prairie Rose',
+  scientificName: 'Rosa arkansana',
+  kingdom:	'Plantae',
+  genus:	'Rosa',
+  use: 'ornamental'
+};
+
+const printPlantInfo = () => {
+
+};
+
+printPlantInfo(prairieRose);
