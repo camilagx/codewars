@@ -36,8 +36,8 @@ let prairieRose = {
   use: 'ornamental'
 };
 
-const printPlantInfo = () => {
-
+const printPlantInfo = ({name,scientificName,kingdom}) => {
+  console.log(`The ${name}, or ${scientificName}, is in the kingdom ${kingdom}`);
 };
 
 printPlantInfo(prairieRose);
