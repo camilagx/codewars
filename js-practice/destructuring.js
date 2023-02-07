@@ -18,6 +18,5 @@ Destructure the items from the planets object so that they are named x, y, and z
 let planets = { x: 'Saturn', y: 'Mars', z: 'Neptune' };
 
 // Destructure here
-
-
+let {x,y,z} = planets;
 console.log(x, y, z);
