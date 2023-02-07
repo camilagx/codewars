@@ -21,3 +21,8 @@ let planets = { x: 'Saturn', y: 'Mars', z: 'Neptune' };
 let {x,y,z} = planets;
 console.log(x, y, z);
 
+/* Challenge #3:
+Define a function named printPlantInfo() so that this code logs the string: ‘The Prairie Rose, or Rosa arkansana, is in the kingdom Plantae’.
+
+Make sure to use destructuring for the function’s parameters.
+*/
